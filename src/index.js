@@ -1,5 +1,5 @@
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 require('dotenv').config();
 
 const tasks = require('./routes/task.routes');
@@ -9,7 +9,7 @@ const { mongoose } = require('./config/database');
 
 const port = process.env.PORT || 3000;
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.json());
 
 app.get('/', (req, res) => {
