@@ -49,7 +49,7 @@ const register = async (req, res) => {
         return res.json({
             success: false,
             message: {
-                error: 'Error creating user'
+                error: error.message
             }
         });
     }
