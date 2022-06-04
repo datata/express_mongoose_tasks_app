@@ -12,6 +12,12 @@ const port = process.env.PORT || 3000;
 app.use(morgan('dev'));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  return res.json({
+    message: 'Welcome to the Task Manager API',
+  });
+});
+
 app.use('/api', require('./routes/user.routes'));
 app.use('/api', tasks);
 
